@@ -7,10 +7,14 @@ public class Context:DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(@"Server=localhost;Database=ReCapProjectDb;Trusted_Connection=true;TrustServerCertificate=True");
+        optionsBuilder.UseSqlServer(@"Server=localhost;Database=CarRentalDb;Trusted_Connection=true;TrustServerCertificate=True");
     }
 
     public DbSet<Car> Cars { get; set; }
     public DbSet<Brand> Brands { get; set; }
     public DbSet<Color> Colors { get; set; }
+    public DbSet<User> Users { get; set; }
+    public DbSet<Customer> Customers { get; set; }
+    public DbSet<Rental> Rentals { get; set; }
+    
 }
